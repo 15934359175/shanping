@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/swiper.jquery.js"></script>
+</head>
+<script>
+    function resize(origin,type){
+        var type=type||"x";
+        if(type=="x"){
+            var clinw=document.documentElement.clientWidth;
+            var scale=clinw/origin*100;
+        }else if(type=="y"){
+            var clinH=document.documentElement.clientHeight;
+            var scale=clinH/origin*100;
+        }
+
+        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+    }
+    window.onload=function(){
+        resize(1334,"y");
+        var mySwiper = new Swiper ('.swiper-container', {
+            pagination : '.swiper-pagination',
+            paginationHide :true,
+            onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+                swiperAnimateCache(swiper); //隐藏动画元素
+                swiperAnimate(swiper); //初始化完成开始动画
+            },
+            onSlideChangeEnd: function(swiper){
+                swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+            }
+        })
+
+    }
+</script>
+<style>
+    body,html{
+        margin:0px;
+        padding:0px;
+    }
+    body,html{
+        height:100%;
+        width:100%;
+        font-family: "微软雅黑";
+    }
+    .floor1{
+        background:url("img/60514.jpg") no-repeat -430px 0;
+        background-size: cover;
+    }
+    .floor1 span{
+        font-size: 0.6rem;
+        color:#F1BC4D;
+        float:left;
+    }
+    .swiper-container{
+        width: 100%;
+        height: 100%;
+    }
+    .floor1 .relax{
+        color:white;
+        font-size: 0.7rem;
+    }
+    .floor1 .relax1{
+        color:#F1BC4D;
+        font-size: 0.7rem;
+    }
+    .floor1 p{
+        font-size:0.45rem;
+        color:white;
+    }
+    .floor1 .text{
+        width:6.5rem;
+        height:1rem;
+        margin-left: 0.8rem;
+    }
+    .floor1-top{
+      margin-top:7.5rem;
+      margin-left:0.8rem;
+    }
+
+
+
+
+
+
+
+    .floor2{
+        background:url("img/back2.jpg") no-repeat -200px 0px;
+        background-size: cover;
+        position: relative;
+    }
+    .floor2 .music img{
+        width:11.6rem;
+        height:7.2rem;
+       position: absolute;
+        opacity: 0.5;
+        top:-1.5rem;
+        left:-2rem;
+    }
+    .floor2 .zhezha{
+        width:100%;
+        height:100%;
+        position: absolute;
+        top:0px;
+        left:0px;
+        background:rgba(23,23,23,0.9);
+    }
+    .floor2 .listen{
+        position: absolute;
+        bottom:2.5rem;
+        left:1.4rem;
+    }
+    .floor2 .listen strong{
+        color:#F1BC4D;
+        font-size: 0.8rem;
+        float:left;
+        margin-left:0.6rem;
+    }
+    .floor2 .listen span{
+        color:white;
+        font-size: 0.6rem;
+        float:left;
+    }
+
+
+
+
+
+
+
+    .floor3 .music3 img{
+        width:7rem;
+        height:12rem;
+        position: absolute;
+        top:0rem;
+        left:0.4rem;
+    }
+    .floor3 .zhezha{
+        width:100%;
+        height:100%;
+        background:rgba(23,23,23,0.8);
+    }
+    .floor3 .yinfu1 img{
+        width:12.8rem;
+        height:8rem;
+        position: absolute;
+        left:0rem;
+        top:1rem;
+    }
+    .floor3 .yinfu2 img{
+        width:12.8rem;
+        height:8rem;
+        position: absolute;
+        left:-5rem;
+        top:0.5rem;
+    }
+    .floor3 .yinfu3 img{
+        width:12.8rem;
+        height:8rem;
+        position: absolute;
+        left:-2rem;
+        top:3.5rem;
+    }
+    .floor3 .start{
+        width:3.5rem;
+        height:0.8rem;
+        border:0.05rem solid #F1BC4D;
+        position: absolute;
+        border-radius: 0.4rem;
+        left:1.9rem;
+        bottom:2rem;
+        font-size: 0.5rem;
+        line-height: 0.8rem;
+        text-align: center;
+        color:#ffecec;
+    }
+    .floor3  span{
+        color:#F1BC4D;
+        font-size: 0.6rem;
+        position: absolute;
+        bottom:4rem;
+        left:0.7rem;
+    }
+</style>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper ">
+
+        <div class="swiper-slide floor1">
+            <div class="floor1-top">
+                <span class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">有一种<strong class="relax">享受</strong>叫视听盛宴</span>
+                <strong class="relax1 ani"  swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">咪咕音乐盛典</strong>
+            </div>
+            <div class="text ani"  swiper-animate-effect="fadeInUpBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.9s">
+                <p>好朋友就是要分享,寒冷的冬天去看一场音乐盛宴吧！</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="swiper-slide floor2"  style="">
+            <div class="listen">
+                <strong class="ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">趣听未来</strong>
+                <br>
+                <span class="ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.9s">听&nbsp;我&nbsp;想&nbsp;听&nbsp;的&nbsp;歌</span>
+            </div>
+
+           <div class="music ani"swiper-animate-effect="slideInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+               <img src="img/music.png" alt="">
+           </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="swiper-slide floor3" style="background:#02222B">
+            <div class="zhezha"></div>
+            <div class="music3 ani"  swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3">
+                <img src="img/music3.png" alt="">
+            </div>
+            <div class="yinfu1 ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <img src="img/b1.png" alt="">
+            </div>
+            <div class="yinfu2 ani"  swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <img src="img/b1.png" alt="">
+            </div>
+            <div  class="yinfu3 ani"  swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <img src="img/b1.png" alt="">
+            </div>
+            <span class=" ani"  swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">音&nbsp;乐&nbsp;就&nbsp;是&nbsp;这&nbsp;么&nbsp;随&nbsp;性</span>
+            <div class="start ani"   swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                立&nbsp;即&nbsp;体&nbsp;验
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+</body>
+<script>
+
+</script>
+</html>
